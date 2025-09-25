@@ -13,7 +13,7 @@
   - [x] Initialize project structure per AGENTS.md guidelines
   - [x] Create `.env.` and `.gitignore` (exclude .env)
   - [x] Create `requirements.txt` with dependencies 
-- 
+  
 
 - **Reddit Data Ingestion**
   - [x] Authenticate to Reddit API 
