@@ -208,3 +208,7 @@ __marimo__/
 
 # Custom project files
 AGENTS.md
+
+# Project-specific virtual environments
+reddit-env/
+01-reddit-experiments/reddit-env/
