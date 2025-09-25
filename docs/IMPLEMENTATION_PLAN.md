@@ -20,7 +20,8 @@
   - [x] Generate Reddit client ID and secret, store in keychain
   - [x] Test Reddit API authentication and confirm working
   - [x] Generate top 10 posts from r/diy as test
-  - [ ] Fetch top r/diy posts from last year only
+  - [ ] Fetch top 50 posts from r/diy, r/fixit, r/homeimprovement (last month only for testing)
+  - [ ] Include Reddit permalink for each post as source
   - [ ] Data cleaning and preprocessing
   - [ ] JSON storage for raw data
 
