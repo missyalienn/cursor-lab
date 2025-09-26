@@ -1,79 +1,70 @@
-# 5-Day Implementation Plan
+# Implementation Plan
 ## Workbench DIY Project Companion
 
-**Timeline**: Thursday - Tuesday  
 **Goal**: Zero-cost functional MVP with core features
 
 ---
 
-## Day 1 (Thursday) - Foundation & Data Pipeline
+## Phase 1: Reddit Auth & Data Pipeline
 
-### Morning (4 hours)
-- **Project Setup**
-  - [x] Initialize project structure per AGENTS.md guidelines
-  - [x] Create `.env.` and `.gitignore` (exclude .env)
-  - [x] Create `requirements.txt` with dependencies 
-  
+### Step 1.1: Environment Setup
+- [x] Initialize project structure per AGENTS.md guidelines
+- [x] Create `.env.` and `.gitignore` (exclude .env)
+- [x] Create `requirements.txt` with dependencies 
 
-- **Reddit Data Ingestion**
-  - [x] Authenticate to Reddit API 
-  - [x] Generate Reddit client ID and secret, store in keychain
-  - [x] Test Reddit API authentication and confirm working
-  - [x] Generate top 10 posts from r/diy as test
-  - [ ] Fetch top 50 posts from r/diy, r/fixit, r/homeimprovement (last month only for testing)
-  - [ ] Include Reddit permalink for each post as source
-  - [ ] Data cleaning and preprocessing
-  - [ ] JSON storage for raw data
+### Step 1.2: Reddit API Data Ingestion
+- [x] Authenticate to Reddit API 
+- [x] Generate Reddit client ID and secret, store in keychain
+- [x] Test Reddit API authentication and confirm working
+- [x] Generate top 10 posts from r/diy as test
+- [x] Fetch top 10 posts from r/diy last month and top 5 comments per post
+- [x] JSON storage for raw data
+- [] Clean and normalize post and comment text (remove markdown, URLs, extra whitespace) 
 
-### Afternoon (4 hours)
-- **Vector Pipeline**
-  - [ ] Sentence Transformers setup
-  - [ ] Text embedding generation
-  - [ ] Pinecone client configuration
-  - [ ] Initial vector upload script
-  - [ ] Test with sample data
+### Step 1.3: Vector Pipeline
+- [ ] Sentence Transformers setup
+- [ ] Text embedding generation
+- [ ] Pinecone client configuration
+- [ ] Initial vector upload script
+- [ ] Test with sample data
 
 **Deliverables**: Working data pipeline, initial vector store
 
 ---
 
-## Day 2 (Friday) - Search API & RAG System
+## Phase 2: Search API & RAG System
 
-### Morning (4 hours)
-- **Search Service**
-  - [ ] Semantic search implementation
-  - [ ] Query preprocessing
-  - [ ] Result ranking and filtering
-  - [ ] Core search module setup
+### Step 2.1: Search Service
+- [ ] Semantic search implementation
+- [ ] Query preprocessing
+- [ ] Result ranking and filtering
+- [ ] Core search module setup
 
-### Afternoon (4 hours)
-- **RAG Response System**
-  - [ ] Format search results for display
-  - [ ] Source citation formatting
-  - [ ] Response structure design
-  - [ ] Basic error handling
-  - [ ] Performance optimization
+### Step 2.2: RAG Response System
+- [ ] Format search results for display
+- [ ] Source citation formatting
+- [ ] Response structure design
+- [ ] Basic error handling
+- [ ] Performance optimization
 
 **Deliverables**: Working RAG system with semantic search
 
 ---
 
-## Day 3 (Monday) - CLI & LLM Integration
+## Phase 3: CLI & LLM Integration
 
-### Morning (4 hours)
-- **CLI Interface**
-  - [ ] Simple command-line interface
-  - [ ] Question input and response display
-  - [ ] Source citation output
-  - [ ] Basic usage monitoring
+### Step 3.1: CLI Interface
+- [ ] Simple command-line interface
+- [ ] Question input and response display
+- [ ] Source citation output
+- [ ] Basic usage monitoring
 
-### Afternoon (4 hours)
-- **LLM Enhancement Layer**
-  - [ ] OpenAI API integration
-  - [ ] Context preparation from search results
-  - [ ] Response formatting with citations
-  - [ ] Token counting and cost controls
-  - [ ] Toggle between RAG/RAG+LLM modes
+### Step 3.2: LLM Enhancement Layer
+- [ ] OpenAI API integration
+- [ ] Context preparation from search results
+- [ ] Response formatting with citations
+- [ ] Token counting and cost controls
+- [ ] Toggle between RAG/RAG+LLM modes
 
 **Deliverables**: Working CLI demo with optional LLM enhancement
 
@@ -124,12 +115,12 @@ pytest
 requests
 ```
 
-### Daily Checkpoints
-- **Day 1 (Thursday)**: Data pipeline functional test
-- **Day 2 (Friday)**: Search returning results
-- **Day 3 (Monday)**: RAG system working
-- **Day 4 (Tuesday)**: LLM integration complete
-- **Day 5 (Wednesday)**: Complete zero-cost demo
+### Phase Checkpoints
+- **Phase 1**: Data pipeline functional test
+- **Phase 2**: Search returning results
+- **Phase 3**: RAG system working
+- **Phase 4**: LLM integration complete
+- **Final**: Complete zero-cost demo
 
 ### Risk Mitigation
 - **API Rate Limits**: Implement caching and throttling
@@ -141,17 +132,17 @@ requests
 
 ## Documentation Plan
 
-### Core Component Docs (Created Daily)
+### Core Component Docs (Created by Phase)
 
-**Day 1 (Thursday)**:
+**Phase 1**:
 - `reddit_data_pipeline.md`
 - `vector_storage_setup.md`
 
-**Day 2 (Friday)**:
+**Phase 2**:
 - `search_api_reference.md`
 - `rag_system_guide.md`
 
-**Day 3 (Monday)**:
+**Phase 3**:
 - `llm_integration_guide.md`
 - `cli_usage_guide.md`
 - `deployment_instructions.md`
